@@ -1,2 +1,2 @@
-# avinashthms.github.com
+# avinashthms.github.io
 CIT 230
