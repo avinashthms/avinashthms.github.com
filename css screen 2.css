@@ -1,0 +1,36 @@
+/* THis is for my screened devices */
+
+/*
+1. Imports are first
+2. General Style Rules
+3. Mobile First devices
+4. Larger Screen Sizes (Media Query Required) */
+
+/* 1.  Import statements */
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/* 2.  General Style Rules */
+
+/* 3. Typography section /*
+h1,h2,h3,h4,h5,h6, {
+    font -family: sansita, sams serif;
+}
+
+body{
+    font -family: helvetica, sam serif;
+    font -size: 18px;
+}
+
+/* 3. Mobile Rules /*
+.frankline-brand(
+    font-size: sec;
+}
+
+img {
+    height: 200px;
+    width: 50%;
+}
+
+h1.thick {
+    font-weight: bold;
+}
