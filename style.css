@@ -3,46 +3,41 @@
 
 /* 2.  General Style Rules */
 
-/* 3. Typography section /*
+/* 3. Typography section */
 h1,h2,h3,h4,h5,h6, {
-    font -family: sansita, sams serif;
+   font-family: 'Sansita', sans-serif;
 }
 
 body{
-    font -family: helvetica, sam serif;
-    font -size: 18px;
+    font-family: helvetica, sam serif;
+    font-size: 18px;
 }
 
-/* 3. Mobile Rules /*
-.TheWeatherSite(
+/* 3. Mobile Rules */
+.TheWeatherSite{
     font-size: sec;
 }
 
 img {
     height: 50px;
-    width: 20%;
+    width: auto;
 }
 
-h1.thick {
-    font-weight: bold;
+h1{
+    font-size: 2em;
 }
 
+.navigation {
+      display: inline;
+      text-align: center;    
+  }
 
+.navigation{
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+  }
 
-
-
-
-
-#logo {
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-img {
-    width: 13%;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
+  nav a{
+      text-decoration: none;
   }
