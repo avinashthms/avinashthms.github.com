@@ -1,7 +1,29 @@
-img {
-    width: 5%;
+#logo {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
-/*h1.thick {
-    font-weight: bold;
+img {
+    width: 13%;
+}
+
+/*li {
+    color: blue;
+
 }*/
+
+#z {
+    color: green;
+
+}
+
+h1 {
+    font-weight: bold;
+    
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
