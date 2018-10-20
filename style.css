@@ -15,7 +15,7 @@ body{
 
 /* 3. Mobile Rules */
 .TheWeatherSite{
-    font-size: sec;
+    font-size: 5vw;
 }
 
 img {
@@ -23,21 +23,66 @@ img {
     width: auto;
 }
 
+header {
+    font-weight: bold;
+}
+
 h1{
     font-size: 2em;
 }
 
-.navigation {
-      display: inline;
-      text-align: center;    
-  }
+nav li{
+    display: inline-block; 
+    list-style: none;
+    padding: 0; /*removed defalut padding*/
+}
 
-.navigation{
+nav{
+    position: fixed;
+    background-color: beige;
+    width: 100%;
+    bottom: 0%;
+    left: 0;
+}
+
+.navigation {
+      padding: 1px 3px;
       display: inline-block;
       list-style: none;
-      padding: 0;
   }
+
+nav a{
+    text-decoration: none; /*this removes the unlined from search bars*/
+}
+
+section{
+        width: 100%;
+        margin: auto;
+}
 
   nav a{
       text-decoration: none;
+        }
+
+  #temperaturefont{
+      font-size: 1em;
+  }
+
+  #temperature{
+    font-size: 2em;
+}
+  
+.boxed{
+    background-color: rgba(200,200,200,.6);
+    margin: .5em auto;
+    border: 2px solid;
+    border-radius: 25px;
+    text-align: center;  /*This bring everything to the center*/
+}
+
+
+ul{
+    display: inline-block; 
+    list-style: none;
+    padding: 0;
   }
