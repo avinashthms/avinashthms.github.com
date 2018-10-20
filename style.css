@@ -45,24 +45,11 @@ nav{
     left: 0;
 }
 
-.navigation {
-      padding: 1px 3px;
-      display: inline-block;
-      list-style: none;
-  }
-
-nav a{
-    text-decoration: none; /*this removes the unlined from search bars*/
-}
 
 section{
         width: 100%;
         margin: auto;
 }
-
-  nav a{
-      text-decoration: none;
-        }
 
   #temperaturefont{
       font-size: 1em;
