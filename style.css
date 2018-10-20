@@ -1,3 +1,38 @@
+/* 1.  Import statements */
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/* 2.  General Style Rules */
+
+/* 3. Typography section /*
+h1,h2,h3,h4,h5,h6, {
+    font -family: sansita, sams serif;
+}
+
+body{
+    font -family: helvetica, sam serif;
+    font -size: 18px;
+}
+
+/* 3. Mobile Rules /*
+.TheWeatherSite(
+    font-size: sec;
+}
+
+img {
+    height: 50px;
+    width: 20%;
+}
+
+h1.thick {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 #logo {
     font-size: xx-large;
     font-weight: bold;
@@ -6,22 +41,6 @@
 img {
     width: 13%;
 }
-
-/*li {
-    color: blue;
-
-}*/
-
-#z {
-    color: green;
-
-}
-
-h1 {
-    font-weight: bold;
-    
-}
-
 
 ul {
     list-style: none;
