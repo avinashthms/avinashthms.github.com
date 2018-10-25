@@ -4,40 +4,63 @@
 /* 2.  General Style Rules */
 
 /* 3. Typography section */
-h1,h2,h3,h4,h5,h6, {
-   font-family: 'Sansita', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+    {
+    font-family: 'Sansita', sans-serif;
 }
 
-body{
+body {
     font-family: helvetica, sam serif;
     font-size: 18px;
 }
 
 /* 3. Mobile Rules */
-.TheWeatherSite{
+.TheWeatherSite {
     font-size: 5vw;
 }
 
-img {
-    height: 50px;
-    width: auto;
+#container{
+    width: 92%;
+    margin: 0 auto;
 }
 
 header {
+    display: flex;
     font-weight: bold;
 }
 
-h1{
+header p {
+    align-self: center;
+}
+
+header img {
+    width: 15%;
+    height: 100px;
+}
+
+h1 {
     font-size: 2em;
 }
 
-nav li{
-    display: inline-block; 
-    list-style: none;
-    padding: 0; /*removed defalut padding*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 12px;
 }
 
-nav{
+nav li {
+    list-style: none;
+    padding: 0;
+    /*removed defalut padding*/
+}
+
+nav {
     position: fixed;
     background-color: beige;
     width: 100%;
@@ -46,30 +69,74 @@ nav{
 }
 
 
-section{
-        width: 100%;
-        margin: auto;
+section {
+    width: 100%;
+    margin: auto;
 }
 
-  #temperaturefont{
-      font-size: 1em;
-  }
-
-  #temperature{
-    font-size: 2em;
+#temperaturefont {
+    font-size: 5em;
 }
-  
-.boxed{
-    background-color: rgba(200,200,200,.6);
+
+.temperature {
+    font-size: 1.5em;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.boxed {
+    background-color: rgba(200, 200, 200, .6);
     margin: .5em auto;
     border: 2px solid;
     border-radius: 25px;
-    text-align: center;  /*This bring everything to the center*/
+    text-align: center;
+    /*This bring everything to the center*/
 }
 
-
-ul{
-    display: inline-block; 
+.boxed ul{
     list-style: none;
-    padding: 0;
-  }
+}
+
+.boxed img{
+    width: 90%;
+}
+.parentsection {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast{
+    display: none;
+}
+
+/*Large Screen*/
+@media only screen and (min-width: 600px) {
+    .parentsection {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav li {
+
+        font-size: 3.5vh;
+    }
+
+    .parentsection section {
+        width: 30%;
+    }
+
+    .forecast{
+        display: block;
+    }
+    
+}

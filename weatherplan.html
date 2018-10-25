@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="en-us">
- <head>
-  <meta charset="UTF-8">
-  <title>Franklin, ID | Weather Site</title>
-  <meta name="description" content="Short Description of the page.">
-  <meta name="viewport" content="width=device-width">
-  <link href="style.css" rel="stylesheet" type="text/css" media="screen">
- </head>
 
- <body>  
-     <header>
-         
-         <img src= "images/logo.jpeg" id="logo">
-            The Weather Site
-        
-          
+<head>
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Site</title>
+    <meta name="description" content="Short Description of the page.">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+
+            <img src=" images/logo.jpeg" id="logo">
+            <p>The Weather Site</p>
+
+
         </header>
-        
+
         <nav>
             <ul>
                 <li>Current</li>
@@ -25,55 +27,54 @@
                 <li>Greenville SC</li>
             </ul>
         </nav>
-      
-        <header>
-     <main>
-         
+
+        <main>
+
             <h1>Franklin, Idaho</h1>
             <p>
-                      <b>Zip:</b>83237
-                    <b>Elevation:</b>4 ft.
-                    <b>Location:</b>42.0135,111.8072
+                <b>Zip:</b>83237
+                <b>Elevation:</b>4 ft.
+                <b>Location:</b>42.0135,111.8072
             </p>
-                
-                <section>
-               <div class="boxed">
-            <h2 class="none"<b>Temperature</b></h2>
-                    <p><strong id="temperaturefont"><b>55 F</b></strong><br>
-                    <span id="temperature">64F</span> <span id="temperature">41F</span><br>
-                </div>
-                    </p>
+
+            <div class="parentsection">
+                <section class="boxed">
+                    <h2> <b>Temperature</b></h2>
+                    <p><strong id="temperaturefont"><b>55 &#176F</b></strong></p>
+                    <p><span class="temperature red">64&#176F</span> <span class="temperature blue">41&#176F</span><br></p>
+                    <p>Feels Like 21&#176F</p>
                 </section>
 
-                <section>
-                    <div class="boxed">
-                    <h2 class="none"<b>Wind</b></h2>
-                    
-                        N
-                        5 mph
-                        <ul>
-                            <li><b>Direction:</b>SW</li>
-                            <li><b>Gusts:</b>5mph</li>
-                        </ul>
-                    </div>
-                    </p>
+                <section class="boxed">
+                    <h2> <b>Wind</b></h2>
+
+                    <span> N</span>
+                    <span>5 mph</span>
+                    <ul>
+                        <li><b>Direction:</b>SW</li>
+                        <li><b>Gusts:</b>5mph</li>
+                    </ul>
                 </section>
 
-                <section>
-
-                    <div class="boxed">
-                <h2><b>Rain</b></h2>
+                <section class="boxed">
+                    <h2><b>Rain</b></h2>
+                    <img src="images/raindrops.jpg" alt="rain drops" />
+                </section>
             </div>
-            </section>
-<section class="boxed">
-            <h3>Hourly Forecast</h3>
-                <p>12am: 41F 1am: 41F 2am: 41F 3am: 41F 4am: 41F 5am: 41F 6am: 42F 7am: 44F 8am: 44F 9am: 46 10am: 49 11am: 51 12pm: 55 13pm: 58 14pm: 62 15pm: 64 16am: 64 17pm: 62 18pm: 61 19pm: 60 20pm: 59 21pm: 58 22pm: 52 23pm: 48
+            <section class="boxed forecast">
+                <h3>Hourly Forecast</h3>
+                <p>12am: 41F 1am: 41F 2am: 41F 3am: 41F 4am: 41F 5am: 41F 6am: 42F 7am: 44F 8am: 44F 9am: 46 10am: 49
+                    11am: 51 12pm: 55 13pm: 58 14pm: 62 15pm: 64 16am: 64 17pm: 62 18pm: 61 19pm: 60 20pm: 59 21pm: 58
+                    22pm: 52 23pm: 48
                 </p>
             </section>
-     </main>
-    
-     <footer>
+        </main>
+
+        <footer>
             &copy;2018 The Weather Site
-           </footer>
- </body>
+        </footer>
+
+    </div>
+</body>
+
 </html>
