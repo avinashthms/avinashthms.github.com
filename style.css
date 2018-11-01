@@ -24,7 +24,7 @@ body {
     font-size: 5vw;
 }
 
-#container{
+#container {
     width: 92%;
     margin: 0 auto;
 }
@@ -103,19 +103,20 @@ section {
     /*This bring everything to the center*/
 }
 
-.boxed ul{
+.boxed ul {
     list-style: none;
 }
 
-.boxed img{
+.boxed img {
     width: 90%;
 }
+
 .parentsection {
     display: flex;
     flex-direction: column;
 }
 
-.forecast{
+.forecast {
     display: none;
 }
 
@@ -127,7 +128,9 @@ section {
     }
 
     nav {
-        position: relative;
+        position: sticky;
+        top: 0;
+        left: 0;
     }
 
     nav li {
@@ -139,8 +142,8 @@ section {
         width: 30%;
     }
 
-    .forecast{
+    .forecast {
         display: block;
     }
-    
+
 }
