@@ -2,9 +2,39 @@
 * Default Styles - Mobile First
 ********************************/
 
-.figured image{
-	border: 1px solid black;
+.figured-images{
+	border: 1px solid #000;
 	box-sizing: border-box;
 	padding: 5px;
 	width: 300px;
 }
+
+.large-caption {
+	display: none;
+}
+
+.small-caption{
+	display: block;
+}
+
+/********************************
+* Default Styles - Mobile First
+********************************/
+
+@media (min-width: 66.7em){
+
+
+	.figured-image {
+		width: 510px;
+	}
+
+	.large-caption {
+		display: block;
+	}
+
+	.small-caption{
+		display: none;
+
+	}
+}
+
