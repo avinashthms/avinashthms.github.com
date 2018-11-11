@@ -5,8 +5,8 @@
 .figured-images{
 	border: 1px solid #000;
 	box-sizing: border-box;
-	padding: 5px;
-	width: 300px;
+	padding: 1px;
+	width: 305px;
 }
 
 .large-caption {
@@ -23,9 +23,8 @@
 
 @media (min-width: 66.7em){
 
-
 	.figured-image {
-		width: 510px;
+		width: 1000px;
 	}
 
 	.large-caption {
