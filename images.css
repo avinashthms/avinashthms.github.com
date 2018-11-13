@@ -21,10 +21,10 @@
 * Default Styles - Mobile First
 ********************************/
 
-@media (min-width: 66.7em){
+@media (min-width: 1000px){
 
-	.figured-image {
-		width: 1000px;
+	.figured-images {
+		width: 505px;
 	}
 
 	.large-caption {
