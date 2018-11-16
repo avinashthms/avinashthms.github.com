@@ -37,17 +37,17 @@
             </p>
 
 
-            <div class="parentsection">
+            <div class="parentsection" id="curWeather">
                 <section class="boxed">
                     <h2> <b>Temperature</b></h2>
                     <p><strong id="temperaturefont"><b>55 &#176; F</b></strong></p>
                     <p><span class="temperature red">64F</span> <span class="temperature blue">41F</span><br></p>
-                    <p>Feels Like 21F</p>
+                    <p>Feels Like <span id="feelTemp">21</span>&#176;F</p>
                 </section>
 
                 <section class="boxed">
                     <h2> <b>Wind</b></h2>
-
+                    <div id="dial" class="w"></div>
                     <span> N</span>
                     <span>5 mph</span>
                     <ul>
@@ -75,6 +75,7 @@
         </footer>
 
     </div>
+    <script src="js/functions.js"></script>
 </body>
 
 </html>

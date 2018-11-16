@@ -2,6 +2,33 @@
 * Default Styles - Mobile First
 ********************************/
 
+#curWeather {
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+}
+   
+   /* Background pictures for summary */
+#curWeather.clear {
+	background-image: url("../avinashthms.github.io/images/clear_300.jpg");
+}
+
+#curWeather.fog {
+	background-image: url("../avinashthms.github.io/images/fog_300.jpg");
+}
+
+#curWeather.rain {
+	background-image: url("../avinashthms.github.io/images/rain_300.jpg");
+}
+
+#curWeather.snow {
+	background-image: url("../avinashthms.github.io/images/snow_300.jpg");
+}
+
+#curWeather.cloud {
+	background-image: url("../avinashthms.github.io/images/clouds_300.jpg");
+}
+
 .figured-images{
 	border: 1px solid #000;
 	box-sizing: border-box;
@@ -35,5 +62,25 @@
 		display: none;
 
 	}
+	#curWeather.clear {
+		background-image: url("../avinashthms.github.io/images/clear_500.jpg");
+	}
+	
+	#curWeather.fog {
+		background-image: url("../avinashthms.github.io/images/fog_500.jpg");
+	}
+	
+	#curWeather.rain {
+		background-image: url("../avinashthms.github.io/images/rain_500.jpg");
+	}
+	
+	#curWeather.snow {
+		background-image: url("../avinashthms.github.io/images/snow_500.jpg");
+	}
+	
+	#curWeather.cloud {
+		background-image: url("../avinashthms.github.io/images/clouds_500.jpg");
+	}
+
 }
 
