@@ -7,7 +7,7 @@
 const temp = 31;
 const speed = 5;
 const direction = "SW"; //Set your own value
-const condition = "rain" //Set your own value
+const condition = "clear" //Set your own value
 
 /* *************************************
 *   Function get condition

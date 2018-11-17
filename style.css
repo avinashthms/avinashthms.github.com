@@ -9,8 +9,7 @@ h2,
 h3,
 h4,
 h5,
-h6
-    {
+h6 {
     font-family: 'Sansita', sans-serif;
 }
 
@@ -22,30 +21,30 @@ body {
 /* 3. Mobile Rules */
 
 #curWeather {
-	background-size: cover;
-	width: 100%;
-	/* height: 1200px;  */
+    background-size: cover;
+    width: 100%;
+    /* height: 1200px;  */
 }
-   
-   /* Background pictures for summary */
+
+/* Background pictures for summary */
 .clear {
-	background-image: url("../avinashthms.github.io/images/clear_300.jpg");
+    background-image: url("/images/clear_300.jpg");
 }
 
 .fog {
-	background-image: url("../avinashthms.github.io/images/fog_300.jpg");
+    background-image: url("/images/fog_300.jpg");
 }
 
 .rain {
-	background-image: url("../avinashthms.github.io/images/rain_300.jpg");
+    background-image: url("/images/rain_300.jpg");
 }
 
 .snow {
-	background-image: url("../avinashthms.github.io/images/snow_300.jpg");
+    background-image: url("/images/snow_300.jpg");
 }
 
 .cloud {
-	background-image: url("../avinashthms.github.io/images/clouds_300.jpg");
+    background-image: url("/images/clouds_300.jpg");
 }
 
 #dial {
@@ -57,41 +56,42 @@ body {
     transform: rotate(270deg);
 }
 
-#dial.n{
+#dial.n {
     transform: rotate(0deg);
 }
 
-#dial.ne{
+#dial.ne {
     transform: rotate(45deg);
 }
 
 
-#dial.nw{
+#dial.nw {
     transform: rotate(315deg);
 }
 
 
-#dial.s{
+#dial.s {
     transform: rotate(180deg);
 }
 
 
-#dial.se{
+#dial.se {
     transform: rotate(135deg);
 }
 
 
-#dial.sw{
+#dial.sw {
     transform: rotate(225deg);
 }
 
-#dial.e{
+#dial.e {
     transform: rotate(90deg);
 }
 
-#dial.w{
+#dial.w {
     transform: rotate(270deg);
 }
+
 .TheWeatherSite {
     font-size: 5vw;
 }
@@ -183,7 +183,7 @@ section {
     width: 90%;
 }
 
-.parentsection {
+#curWeather {
     display: flex;
     flex-direction: column;
 }
@@ -192,9 +192,13 @@ section {
     display: none;
 }
 
+#curWeather{
+    background: cover;
+}
+
 /*Large Screen*/
 @media only screen and (min-width: 600px) {
-    .curWeather {
+    #curWeather {
         display: flex;
         flex-direction: row;
     }
@@ -218,7 +222,7 @@ section {
         display: block;
     }
 
-    #circle-pointer{
+    #circle-pointer {
         height: 100px;
         width: 100px;
         background-image: url("/images/wind-pointer.png");
@@ -229,25 +233,28 @@ section {
         margin: auto;
     }
 
-       /* Background pictures for summary */
-.clear {
-	background-image: url("/images/clear_300.jpg");
-}
+    /* Background pictures for summary */
 
-.fog {
-	background-image: url("/images/fog_300.jpg");
-}
 
-.rain {
-	background-image: url("/images/rain_300.jpg");
-}
 
-.snow {
-	background-image: url("/images/snow_300.jpg");
-}
+    .clear {
+        background-image: url("/images/clear_500.jpg");
+    }
 
-.cloud {
-	background-image: url("/images/clouds_300.jpg");
-}
+    .fog {
+        background-image: url("/images/fog_500.jpg");
+    }
+
+    .rain {
+        background-image: url("/images/rain_500.jpg");
+    }
+
+    .snow {
+        background-image: url("/images/snow_500.jpg");
+    }
+
+    .cloud {
+        background-image: url("/images/clouds_500.jpg");
+    }
 
 }
