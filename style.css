@@ -194,7 +194,7 @@ section {
 
 /*Large Screen*/
 @media only screen and (min-width: 600px) {
-    .parentsection {
+    .curWeather {
         display: flex;
         flex-direction: row;
     }
@@ -210,7 +210,7 @@ section {
         font-size: 3.5vh;
     }
 
-    .parentsection section {
+    #curWeather section {
         width: 30%;
     }
 
@@ -231,23 +231,23 @@ section {
 
        /* Background pictures for summary */
 .clear {
-	background-image: url("../avinashthms.github.io/images/clear_300.jpg");
+	background-image: url("/images/clear_300.jpg");
 }
 
 .fog {
-	background-image: url("../avinashthms.github.io/images/fog_300.jpg");
+	background-image: url("/images/fog_300.jpg");
 }
 
 .rain {
-	background-image: url("../avinashthms.github.io/images/rain_300.jpg");
+	background-image: url("/images/rain_300.jpg");
 }
 
 .snow {
-	background-image: url("../avinashthms.github.io/images/snow_300.jpg");
+	background-image: url("/images/snow_300.jpg");
 }
 
 .cloud {
-	background-image: url("../avinashthms.github.io/images/clouds_300.jpg");
+	background-image: url("/images/clouds_300.jpg");
 }
 
 }

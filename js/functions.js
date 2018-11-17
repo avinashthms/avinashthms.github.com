@@ -56,12 +56,14 @@ function changeSummaryImage(keyword){
     const currentWeather = document.getElementById("curWeather");
     switch (keyword){
         case "cloud":
+        console.log("cloud");
          currentWeather.setAttribute("class", "cloud"); //"cloud" is the CSS rule selector
          break;
         case "clear":
         currentWeather.setAttribute("class", "clear");
          break;
         case "snow":
+        console.log("class: snow");
         currentWeather.setAttribute("class", "snow");
          break;
         case "fog":
