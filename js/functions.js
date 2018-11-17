@@ -6,7 +6,7 @@
 // Variables for Function Use
 const temp = 31;
 const speed = 5;
-const direction = "SW"; //Set your own value
+const direction = "n"; //Set your own value
 const condition = "clear" //Set your own value
 
 /* *************************************
