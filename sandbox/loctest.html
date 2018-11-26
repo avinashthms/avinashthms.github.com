@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Location Test</title>
+        <meta name="viewport" content="width=device-width">
+        <style>
+        .hide{
+   display: none;
+ }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <header>Header</header>
+                
+            <nav>Nav Bar</nav>
+
+            <p id="status"> </p>
+            <main>
+                <h1 id="location-name">Location Name</h1>
+            </main>
+            <footer>Footer</footer>
+        </div>
+        <script src="loctest.js"></script>
+    </body>
+</html>
+
+/* URL to request city data using latitude and longitude */
+/* curl -X GET "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=4Rv2CjA4GQnBDGrZYKmg9WEC8SxyYhmL&q=43.816667%2C-111.783333&language=en-us&details=false&toplevel=false" */
