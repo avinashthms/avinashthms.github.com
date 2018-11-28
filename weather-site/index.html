@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Site</title>
+    <meta name="description" content="Short Description of the page.">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+
+            <img src=" images/logo.jpeg" alt="logo" />
+            <p>The Weather Site</p>
+
+
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Current</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="franklin.html">Franklin ID </a> </li>
+                <li> <a href="greenville.html">Greenville SC</a> </li>
+            </ul>
+        </nav>
+
+        <p id="status"> </p>
+
+        <main>
+
+            <h1>Franklin, Idaho</h1>
+            <p>
+                <b>Zip:</b>83237
+                <b>Elevation:</b>4 ft.
+                <b>Location:</b>42.0135,111.8072
+            </p>
+
+
+            <div class="parentsection" id="curWeather">
+                <section class="boxed">
+                    <h2> <b>Temperature</b></h2>
+                    <p><strong id="temperaturefont"><b><span id="nTemp">55</span>5 &#176; F</b></strong></p>
+                    <p><span class="temperature red"><span id="hTemp">64</span>5F</span> <span class="temperature blue">41F</span><br></p>
+                    <p>Feels Like <span id="feelTemp">21</span>&#176;F</p>
+                </section>
+
+                <section class="boxed">
+                    <h2> <b>Wind</b></h2>
+                    <div id="dial" class="w"></div>
+                    <span> N</span>
+                    <span>5 mph</span>
+                    <ul>
+                        <li><b>Direction:</b>SW</li>
+                        <li><b>Gusts:</b>5mph</li>
+                    </ul>
+                </section>
+
+                <section class="boxed">
+                    <h2><b>Rain</b></h2>
+                    <img src="images/raindrops.jpg" alt="rain drops" />
+                </section>
+            </div>
+            <section class="boxed forecast">
+                <h3>Hourly Forecast</h3>
+                <p>12am: 41F 1am: 41F 2am: 41F 3am: 41F 4am: 41F 5am: 41F 6am: 42F 7am: 44F 8am: 44F 9am: 46 10am: 49
+                    11am: 51 12pm: 55 13pm: 58 14pm: 62 15pm: 64 16am: 64 17pm: 62 18pm: 61 19pm: 60 20pm: 59 21pm: 58
+                    22pm: 52 23pm: 48
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            &copy;2018 The Weather Site
+        </footer>
+
+    </div>
+    <script src="js/functions.js"></script>
+    <script src="js/geo_loc.js"></script>
+    
+</body>
+
+</html>
