@@ -8,7 +8,6 @@ and populate a web page with the data.*/
 getGeoLocation();
 
 
-
 /* the function will get the current location by longitude and latitude. */
 
 function getGeoLocation() {

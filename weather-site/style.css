@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 /* 2.  General Style Rules */
-
+.hourlytemp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 0;
+}
 /* 3. Typography section */
 h1,
 h2,

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Franklin, ID | Weather Site</title>
+    <title>current city | Idaho</title>
     <meta name="description" content="Short Description of the page.">
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -32,44 +32,47 @@
 
         <main>
 
-            <h1>Franklin, Idaho</h1>
+            <h1><span id="city">Rexburg</span>, <span id= "locState">Idaho</span></h1>
             <p>
-                <b>Zip:</b>83237
-                <b>Elevation:</b>4 ft.
-                <b>Location:</b>42.0135,111.8072
+                <b>Zip:</b><span id="codpostal">875440</span>
+                <b>Elevation:</b><span id="Elev">48195</span>ft.
+                <b>Location:</b><span id= "location">43.8306634,111.804620399999</span>
             </p>
 
 
             <div class="parentsection" id="curWeather">
                 <section class="boxed">
                     <h2> <b>Temperature</b></h2>
-                    <p><strong id="temperaturefont"><b><span id="nTemp">55</span>5 &#176; F</b></strong></p>
-                    <p><span class="temperature red"><span id="hTemp">64</span>5F</span> <span class="temperature blue">41F</span><br></p>
-                    <p>Feels Like <span id="feelTemp">21</span>&#176;F</p>
+                    <p><strong id="temperaturefont"><b><span id="currentTemp">55</span> &#176; F</b></strong></p>
+                    <p><span class="temperature red"><span id="hTemp">64</span>5F</span> <span class="temperature blue"><span id="lowTemp">41F</span></span><br></p>
+                    <p>Feels Like <span id="feelTemp">32</span>&#176;F</p>
                 </section>
 
                 <section class="boxed">
                     <h2> <b>Wind</b></h2>
                     <div id="dial" class="w"></div>
-                    <span> N</span>
-                    <span>5 mph</span>
+                    <span id= "unit"> N</span>
+                    <span id= "speed">3.5 mph</span>
                     <ul>
-                        <li><b>Direction:</b>SW</li>
-                        <li><b>Gusts:</b>5mph</li>
+                        <li><b>Direction:</b><span id="direction">NE</span></li>
+                        <li><b>Gusts:</b>3.5mph</li>
                     </ul>
                 </section>
 
                 <section class="boxed">
-                    <h2><b>Rain</b></h2>
+                    <h2><b><span id= "conditionWeather">Rain</span></b></h2>
                     <img src="images/raindrops.jpg" alt="rain drops" />
                 </section>
             </div>
+            
             <section class="boxed forecast">
                 <h3>Hourly Forecast</h3>
-                <p>12am: 41F 1am: 41F 2am: 41F 3am: 41F 4am: 41F 5am: 41F 6am: 42F 7am: 44F 8am: 44F 9am: 46 10am: 49
-                    11am: 51 12pm: 55 13pm: 58 14pm: 62 15pm: 64 16am: 64 17pm: 62 18pm: 61 19pm: 60 20pm: 59 21pm: 58
-                    22pm: 52 23pm: 48
-                </p>
+                <aside>
+                    <!-- JSON TEMP HOURLY instead of the paragraph below-->
+                </aside>
+                <!-- <p>17hrs: 33F 18hrs: 30F19hrs: 30F20hrs: 30F21hrs: 
+                        31F22hrs: 31F23hrs: 30F0hrs: 29F1hrs: 29F2hrs: 28F3hrs: 28F4hrs: 27F
+                </p>-->
             </section>
         </main>
 
@@ -80,7 +83,7 @@
     </div>
     <script src="js/functions.js"></script>
     <script src="js/geo_loc.js"></script>
-    
+
 </body>
 
 </html>
