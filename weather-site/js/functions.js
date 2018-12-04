@@ -3,47 +3,25 @@
  ************************************* */
 //console.log('My javascript is being read.');
 
+const temp = 23;
+const speed = 2.3;
+const direction = "W"; //Set your own value
+const condition ="Rain"; //Set your own value
+ //call function build wind chill
+ buildWC(speed, temp);
+ //call function windDial
+ windDial(direction);
 
-/* *************************************
- *   Function get condition
- ************************************* */
-
-function getCondition(condition) {
-    console.log(condition);
-
-    if (condition.includes("cloud") || condition.includes("cloudy") || condition.includes("Party Cloudy") ||
-        condition.includes("Overcast")) {
-        let keyword = "cloud";
-        console.log(keyword);
-        return (keyword);
-    } else if (condition.includes("clear") || condition.includes("Sunny")) {
-        let keyword = "clear";
-        console.log(keyword);
-        return (keyword);
-    } else if (condition.includes("fog") || condition.includes("misty")) {
-        let keyword = "fog";
-        console.log(keyword);
-        return (keyword);
-    } else if (condition.includes("rain") || condition.includes("rainy") || condition.includes("wet weather")) {
-        let keyword = "rain";
-        console.log(keyword);
-        return (keyword);
-    } else if (condition.includes("snow") || condition.includes("snowy") || condition.includes("freezing")) {
-        let keyword = "snow";
-        console.log(keyword);
-        return (keyword);
-    }
-}
-
-/* *************************************
- *   Function change Summary Image
- ************************************* */
-
+ //call function get condition
+ let keyword = getCondition(condition);
+ //call the cuntion change summary image
+ changeSummaryImage(keyword);
 
 // Get location code from API
 function getCode(LOCALE) {
     const API_KEY = '4Rv2CjA4GQnBDGrZYKmg9WEC8SxyYhmL';
     const URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=' + API_KEY + '&q=' + LOCALE;
+    console.log(URL);
     fetch(URL)
         .then(response => response.json())
         .then(function (data) {
@@ -78,13 +56,10 @@ function getWeather(locData) {
             console.log(data); // Let's see what we got back
             // Start collecting data and storing it
             locData['currentTemp'] = data[0].Temperature.Imperial.Value;
-            document.getElementById("currentTemp").innerHTML = locData['currentTemp'];
             locData['summary'] = data[0].WeatherText;
             locData['windSpeed'] = data[0].Wind.Speed.Imperial.Value;
-            document.getElementById("speed").innerHTML = locData['windSpeed']
             locData['windUnit'] = data[0].Wind.Speed.Imperial.Unit;
             locData['windDirection'] = data[0].Wind.Direction.Localized;
-            document.getElementById("Direction").innerHTML = locData['windDirection']
             locData['windGust'] = data[0].WindGust.Speed.Imperial.Value;
             locData['pastLow'] = data[0].TemperatureSummary.Past12HourRange.Minimum.Imperial.Value;
             locData['pastHigh'] = data[0].TemperatureSummary.Past12HourRange.Maximum.Imperial.Value;
@@ -111,11 +86,6 @@ function getHourly(locData) {
             locData["nextHour"] = nextHour;
             // Counter for the forecast hourly temps
             var i = 1;
-            var d = new Date();
-            var n = d.getHours();
-            var myAside = document.querySelector('aside');
-            var myul = document.createElement('ul');
-            myul.className = "hourlytemp";
             // Get the temps for the next 12 hours
             data.forEach(function (element) {
                 let temp = element.Temperature.Value;
@@ -133,14 +103,6 @@ function getHourly(locData) {
                     lowTemp = temp;
                 }
 
-                var myli = document.createElement('li');
-                myli.textContent = n + "hrs: " + temp + "F";
-                if (n == 23) {
-                    n = -1;
-                }
-                n = n + 1;
-                myul.appendChild(myli);
-
                 // Replace stored low hi and low temps if they changed
                 if (hiTemp != locData.pastHigh) {
                     locData["pastHigh"] = hiTemp; // When done, this is today's high temp
@@ -150,7 +112,6 @@ function getHourly(locData) {
                 }
                 i++; // Increase the counter by 1
             }); // ends the foreach method
-            myAside.appendChild(myul);
             console.log('Finished locData object and data:');
             console.log(locData);
 
@@ -168,23 +129,23 @@ function buildPage(locData) {
         .then(function (data) {
 
             // Variables for Function Use
-            const temp = locData.hourTemp1;
+            const temp = locData.currentTemp;
             const speed = locData.windSpeed;
             const direction = locData.windDirection; //Set your own value
             const condition = locData.summary; //Set your own value
 
             //JSON DATA GENERAL
 
-            document.getElementById("currentTemp").innerHTML = locData.hourTemp1;
+            document.getElementById("currentTemp").innerHTML = locData.currentTemp;
             document.getElementById("city").innerHTML = locData.name;
             document.getElementById("locState").innerHTML = locData.state;
             document.getElementById("codpostal").innerHTML = locData.postal;
-            document.getElementById("elev").innerHTML = locData.elevation;
+            document.getElementById("Elev").innerHTML = locData.elevation;
             document.getElementById("location").innerHTML = locData.geoposition;
-            document.getElementById("highTemo").innerHTML = locData.postHgh;
-            document.getElementById("lowTemp").innerHTML = locData.postLow;
-            document.getElementById("direction").innerHTML = locData.windDirection;
-            document.getElementById("conditionWeather").innerHTML = locData.summary
+            document.getElementById("hTemp").innerHTML = locData.pastHigh;
+            document.getElementById("lowTemp").innerHTML = locData.pastLow;
+            document.getElementById("unit").innerHTML = locData.windDirection;
+            document.getElementById("conditionWeather").innerHTML = locData.summary;
 
             //JSON FOR NEXT 12HRS
             var i = 1;
@@ -217,7 +178,8 @@ function buildPage(locData) {
 
             //call function get condition
             let keyword = getCondition(condition);
-
+            console.log("keyword:");
+            console.log(keyword);
             //call the cuntion change summary image
             changeSummaryImage(keyword);
 
@@ -226,26 +188,68 @@ function buildPage(locData) {
 
 }
 
+/* *************************************
+ *   Function get condition
+ ************************************* */
+
+function getCondition(condition) {
+    console.log(condition);
+
+    if (condition.includes("Cloud") || condition.includes("Cloudy") || condition.includes("Party Cloudy") ||
+        condition.includes("Overcast")) {
+        let keyword = "cloud";
+        console.log(keyword);
+        return (keyword);
+    } else if (condition.includes("Clear") || condition.includes("Sunny") || condition.includes("Mostly clear")) {
+        let keyword = "clear";
+        console.log(keyword);
+        return (keyword);
+    } else if (condition.includes("Fog") || condition.includes("misty")) {
+        let keyword = "fog";
+        console.log(keyword);
+        return (keyword);
+    } else if (condition.includes("Rain") || condition.includes("rainy") || condition.includes("wet weather")) {
+        let keyword = "rain";
+        console.log(keyword);
+        return (keyword);
+    } else if (condition.includes("Snow") || condition.includes("snowy") || condition.includes("freezing")) {
+        let keyword = "snow";
+        console.log(keyword);
+        return (keyword);
+    }
+}
+
+
+/* *************************************
+ *   Function change Summary Image
+ ************************************* */
 function changeSummaryImage(keyword) {
+    console.log("keyword in changesummaryimage");
     console.log(keyword);
     const currentWeather = document.getElementById("curWeather");
+    const imagebox = document.getElementById("imagebox");
     switch (keyword) {
         case "cloud":
             console.log("cloud");
             currentWeather.setAttribute("class", "cloud"); //"cloud" is the CSS rule selector
+            imagebox.setAttribute("src", "images/clouds_300.jpg");
             break;
         case "clear":
             currentWeather.setAttribute("class", "clear");
+            imagebox.setAttribute("src", "images/clear_300.jpg");
             break;
         case "snow":
             console.log("class: snow");
             currentWeather.setAttribute("class", "snow");
+            imagebox.setAttribute("src", "images/snow_300.jpg");
             break;
         case "fog":
             currentWeather.setAttribute("class", "fog");
+            imagebox.setAttribute("src", "images/fog_300.jpg");
             break;
         case "rain":
             currentWeather.setAttribute("class", "rain");
+            imagebox.setAttribute("src", "images/rain_300.jpg");
             break;
     }
 }
@@ -312,6 +316,11 @@ function windDial(direction) {
 
 // Calculate the Windchill
 function buildWC(speed, temp) {
+
+    console.log("speed:");
+    console.log(speed);
+    console.log("temp");
+    console.log(temp);
     const feelTemp = document.getElementById('feelTemp');
 
     // Compute the windchill

@@ -23,6 +23,7 @@ function getGeoLocation() {
             console.log(`Lat and Long are: ${LOCALE}.`);
 
             // Call getCode function, send locale
+            console.log(LOCALE);
             getCode(LOCALE);
         })
     } else {
