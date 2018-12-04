@@ -182,6 +182,7 @@ function buildPage(locData) {
             console.log(keyword);
             //call the cuntion change summary image
             changeSummaryImage(keyword);
+            document.getElementById("status").setAttribute("class", "hide");
 
         })
         .catch(error => console.log('There was an error: ', error))
