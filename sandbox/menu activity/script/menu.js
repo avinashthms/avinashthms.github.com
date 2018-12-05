@@ -22,7 +22,7 @@ MENULINK.addEventListener("click", function (evt) {
 //function getElementById  
 //there is an ERROR IN THIS CODE AND THATS THE ONLY MISTAKE IN THIS SECTION      
 function getdata(LOCALE) {
-    let URL = 'scripts/weather.json'; // where you have saved weather.json 
+    let URL = 'script/weather.json'; // where you have saved weather.json 
     fetch(URL) // fetch is like go get this data from- remember dogs, they get things to us when we throw things
         .then(response => response.json()) // go get this and response should be in json
         .then(function (data) { // variable that is stored inside of json 
