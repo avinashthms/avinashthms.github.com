@@ -28,6 +28,7 @@ function getdata(LOCALE) {
         .then(function (data) { // variable that is stored inside of json 
             console.log('Json object from getdata function:');
             console.log(data);
+            console.log(data.LOCALE);
         //     const locData = {}; // Create an object
         //     locData['name'] = ;
         //     locData['postal'] = ;
