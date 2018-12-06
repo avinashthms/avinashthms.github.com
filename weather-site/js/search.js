@@ -17,10 +17,10 @@ const searchResults = document.getElementById("searchResults");
 
 // Listen for search entries, get matching locations
 searchResults.addEventListener("click", function (event) {
-   console.log(event.target.dataset);
-   if (!event.target.dataset.isNullOrEmpty) {
+   console.log(event.target.dataset.key);
+   if (!event.target.dataset.key.isNullOrEmpty) {
     event.preventDefault();
-    getLocationByKey(event.target.dataset);
+    getLocationByKey(event.target.dataset.key);
    }
  
     });
