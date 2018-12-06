@@ -339,3 +339,28 @@ function buildWC(speed, temp) {
     // wc = 'Feels like '+wc+'°F';
     feelTemp.innerHTML = wc;
 }
+
+// Get location info, based on city key, from API
+function getLocationByKey(cityKey) {
+    const API_KEY = '4Rv2CjA4GQnBDGrZYKmg9WEC8SxyYhmL';
+    const URL = 'https://dataservice.accuweather.com/locations/v1/'+cityKey+'?apikey='+API_KEY;
+    fetch(URL)
+     .then(response => response.json())
+     .then(function (data) {
+      console.log('Json object from getLocationByKey function:');
+      console.log(data);
+      const locData = {}; // Create an empty object
+      locData['key'] = data.Key; // Add the value to the object
+      locData['name'] = data.LocalizedName;
+      locData['postal'] = data.PrimaryPostalCode;
+      locData['state'] = data.AdministrativeArea.LocalizedName;
+      locData['stateAbbr'] = data.AdministrativeArea.ID;
+      let lat = data.GeoPosition.Latitude;
+      let long = data.GeoPosition.Longitude;
+      const LOCALE = lat+', '+long;
+      locData['geoposition'] = LOCALE;
+      locData['elevation'] = data.GeoPosition.Elevation.Imperial.Value;
+      getWeather(locData);
+      })
+     .catch(error => console.log('There was a getLocationByKey error: ', error))
+    } // end getLocationByKey function

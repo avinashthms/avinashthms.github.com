@@ -10,6 +10,20 @@ QUERY.addEventListener("keyup", function () {
     processJSON(searchValue);
    }); // ends the eventListener
 
+
+
+   // Get the query element from the DOM
+const searchResults = document.getElementById("searchResults");
+
+// Listen for search entries, get matching locations
+searchResults.addEventListener("click", function () {
+  //   let searchValue = QUERY.value;
+  //   // Call the processJSON function to request data and build results
+  //   processJSON(searchValue);
+    });
+
+
+
 // Request data and build the list of matching locations
 function processJSON(searchValue) {
     // Get Data from the Autocomplete API
