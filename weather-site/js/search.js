@@ -20,7 +20,7 @@ searchResults.addEventListener("click", function (event) {
   //   let searchValue = QUERY.value;
   //   // Call the processJSON function to request data and build results
   //   processJSON(searchValue);
-   console.log(event.dataset);
+   console.log(event.target.dataset);
     });
 
 
