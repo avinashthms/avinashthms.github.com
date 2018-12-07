@@ -183,6 +183,7 @@ function buildPage(locData) {
             //call the cuntion change summary image
             changeSummaryImage(keyword);
             document.getElementById("status").setAttribute("class", "hide");
+            document.getElementById("searchResults").setAttribute("class", "hide");
             document.getElementsByTagName("MAIN")[0].setAttribute("class", "");
 
         })

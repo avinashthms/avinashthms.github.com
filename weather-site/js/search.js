@@ -40,7 +40,7 @@ function processJSON(searchValue) {
     console.log(data); // Log what is returned
       
       // Build a list of returned locations
-      let list = '<ul>';
+      let list = '<ul id="searchResults">';
       for (let i = 0, n = data.length; i < n; i++) {
         let cityKey = data[i].Key;
         let cityName = data[i].LocalizedName;
@@ -53,4 +53,5 @@ function processJSON(searchValue) {
       let searchResults = document.getElementById("searchResults");
       searchResults.innerHTML = list;
     })  .catch(error => console.log('There was an error: ', error))
+    document.getElementsByTagName("searchResults")[0].setAttribute("class", "");
   } // ends the processJSON function
