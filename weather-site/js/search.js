@@ -26,7 +26,7 @@ searchResults.addEventListener("click", function (event) {
     });
 
 
-    
+
 // Request data and build the list of matching locations
 function processJSON(searchValue) {
     // Get Data from the Autocomplete API
@@ -53,5 +53,5 @@ function processJSON(searchValue) {
       let searchResults = document.getElementById("searchResults");
       searchResults.innerHTML = list;
     })  .catch(error => console.log('There was an error: ', error))
-    document.getElementsByTagName("searchResults")[0].setAttribute("class", "");
+    document.getElementsById("searchResults")[0].setAttribute("class", "");
   } // ends the processJSON function
