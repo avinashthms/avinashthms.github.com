@@ -53,5 +53,5 @@ function processJSON(searchValue) {
       let searchResults = document.getElementById("searchResults");
       searchResults.innerHTML = list;
     })  .catch(error => console.log('There was an error: ', error))
-    document.getElementsById("searchResults")[0].setAttribute("class", "");
+    document.getElementsById("searchResults").setAttribute("class", "");
   } // ends the processJSON function
