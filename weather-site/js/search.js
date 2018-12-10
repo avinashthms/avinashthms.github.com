@@ -26,7 +26,7 @@ searchResults.addEventListener("click", function (event) {
     });
 
 
-
+    
 // Request data and build the list of matching locations
 function processJSON(searchValue) {
     // Get Data from the Autocomplete API
